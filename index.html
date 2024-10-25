@@ -3,143 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prerna Cold Storage and Allied Industries</title>
+    <title>Prerna Cold Storage</title>
+    <link rel="stylesheet" href="Style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Prerna Cold Storage and Allied Industries</h1>
-        <p>Your Reliable Storage Solution</p>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <i class="fas fa-snowflake logo-icon"></i>
+                <div class="logo-text">
+                    <h1>Prerna Cold Storage</h1>
+                    <p>Storage & Allied Industries</p>
+                </div>
+            </div>
+
+            <button class="toggle-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#chambers">Chambers</a></li>
+                <li><a href="#farmers">Farmers</a></li>
+                <li><a href="#retailers">Retailers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#farmer">Farmer Dashboard</a></li>
-            <li><a href="#chambers">Chambers</a></li>
-            <li><a href="#rent">Rent Details</a></li>
-            <li><a href="#fab">Facilities</a></li>
-            <li><a href="#retailer">Retailer Zone</a></li>
-            <li><a href="#available">Available Area</a></li>
-        </ul>
-    </nav>
-
-    <section id="farmer">
-        <div class="container">
-            <h2 class="section-title">Farmer Dashboard</h2>
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>Current Storage</h3>
-                    <p>Track your stored items and their conditions</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Storage History</h3>
-                    <p>View your past storage records</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Payments</h3>
-                    <p>Manage your payments and invoices</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="chambers">
-        <div class="container">
-            <h2 class="section-title">Chamber Section</h2>
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>Chamber A</h3>
-                    <p>Temperature: -2°C to 2°C</p>
-                    <p>Capacity: 1000 tons</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Chamber B</h3>
-                    <p>Temperature: 2°C to 4°C</p>
-                    <p>Capacity: 800 tons</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="rent">
-        <div class="container">
-            <h2 class="section-title">Rent Section</h2>
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>Daily Rates</h3>
-                    <p>₹2 per kg per day</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Monthly Rates</h3>
-                    <p>₹45 per kg per month</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="fab">
-        <div class="container">
-            <h2 class="section-title">Facilities & Amenities</h2>
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>24/7 Power Backup</h3>
-                    <p>Uninterrupted power supply</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Security</h3>
-                    <p>24/7 CCTV surveillance</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Loading/Unloading</h3>
-                    <p>Modern equipment available</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="retailer">
-        <div class="container">
-            <h2 class="section-title">Retailer Section</h2>
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>Bulk Storage</h3>
-                    <p>Special rates for bulk storage</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Distribution</h3>
-                    <p>Efficient distribution network</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="available">
-        <div class="container">
-            <h2 class="section-title">Available Area</h2>
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>Current Availability</h3>
-                    <p>Total Capacity: 5000 tons</p>
-                    <p>Available Space: 2000 tons</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Book Space</h3>
-                    <p>Contact us to reserve storage space</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <p>Prerna Cold Storage and Allied Industries</p>
-                <p>Mallawa, Mahmodabad</p>
-                <p>Pin Code: 227809</p>
-                <p>Email: info@prernacold.com</p>
-                <p>Phone: +91-XXXXXXXXXX</p>
-            </div>
-        </div>
-    </footer>
+    <link rel="stylesheet" href="app.js">
 </body>
 </html>
