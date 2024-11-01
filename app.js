@@ -1,29 +1,49 @@
-function toggleMenu() {
-  const navMenu = document.querySelector(".nav-menu");
-  const toggleBtn = document.querySelector(".toggle-btn");
+// Custom Cursor
+const cursor = document.querySelector('.cursor');
+        
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
 
-  navMenu.classList.toggle("active");
+// Add grow effect on hover for text elements
+document.querySelectorAll('a, h1, h2, h3, p, button, .service-card, .market-card').forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursor.classList.add('grow');
+    });
+    
+    element.addEventListener('mouseleave', () => {
+        cursor.classList.remove('grow');
+    });
+});
 
-  // Change icon based on menu state
-  const icon = toggleBtn.querySelector("i");
-  if (navMenu.classList.contains("active")) {
-    icon.classList.remove("fa-bars");
-    icon.classList.add("fa-times");
-  } else {
-    icon.classList.remove("fa-times");
-    icon.classList.add("fa-bars");
-  }
-}
+// Smooth scroll for navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
-// Close menu when clicking outside
-document.addEventListener("click", function (event) {
-  const navMenu = document.querySelector(".nav-menu");
-  const toggleBtn = document.querySelector(".toggle-btn");
+// Animation on scroll
+const observerOptions = {
+    threshold: 0.1
+};
 
-  if (!event.target.closest(".nav-container")) {
-    navMenu.classList.remove("active");
-    const icon = toggleBtn.querySelector("i");
-    icon.classList.remove("fa-times");
-    icon.classList.add("fa-bars");
-  }
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.service-card, .market-card, .about-content > div').forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(50px)';
+    element.style.transition = 'all 0.6s ease';
+    observer.observe(element);
 });
